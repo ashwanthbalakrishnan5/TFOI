@@ -1,1 +1,1 @@
-web: gunicorn tfoi.wsgi --log-file -
+web: gunicorn tfoi.wsgi:application
