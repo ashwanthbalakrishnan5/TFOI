@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-!gd1viss=f)f1y5$ga%q_tglu)oz2r(()$jzchvwx6ob+&r$jk"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["3.70.135.56", "0.0.0.0", "localhost", "127.0.0.1"]
 
 INTERNAL_IPS = ["127.0.0.1"]
 # Application definition
@@ -126,6 +126,8 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
+STATIC_ROOT = BASE_DIR / "static"
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
@@ -153,3 +155,22 @@ DJOSER = {
         "user_create": "poll.serializers.SuperAdminUserCreateSerializer",
     }
 }
+
+# import sentry_sdk
+# from sentry_sdk.integrations.django import DjangoIntegration
+
+# sentry_sdk.init(
+#     dsn="https://753d583eacb3aa2eac8114d5ac817c4f@o4505789842194432.ingest.sentry.io/4505789843898368",
+#     integrations=[DjangoIntegration()],
+#     # If you wish to associate users to errors (assuming you are using
+#     # django.contrib.auth) you may enable sending PII data.
+#     send_default_pii=True,
+#     # Set traces_sample_rate to 1.0 to capture 100%
+#     # of transactions for performance monitoring.
+#     # We recommend adjusting this value in production.
+#     traces_sample_rate=1.0,
+#     # Set profiles_sample_rate to 1.0 to profile 100%
+#     # of sampled transactions.
+#     # We recommend adjusting this value in production.
+#     profiles_sample_rate=1.0,
+# )
