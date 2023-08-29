@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django_filters",
-    # 'corsheaders',
+    "corsheaders",
     "drf_yasg",
     "rest_framework",
     "djoser",
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "debug_toolbar.middleware.DebugToolbarMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -156,6 +157,8 @@ DJOSER = {
         "user_create": "poll.serializers.SuperAdminUserCreateSerializer",
     }
 }
+
+CORS_ALLOW_ALL_ORIGINS = True
 
 # import sentry_sdk
 # from sentry_sdk.integrations.django import DjangoIntegration
