@@ -12,3 +12,4 @@ drf-yasg==1.21.6
 gunicorn
 Pillow
 whitenoise
+coreapi
