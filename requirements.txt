@@ -13,3 +13,4 @@ gunicorn
 Pillow
 whitenoise
 coreapi
+dj-database-url
