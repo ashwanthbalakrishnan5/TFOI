@@ -162,6 +162,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 CSRF_TRUSTED_ORIGINS = [
     "https://tfoibackend.applikuapp.com/",
+    "http://tfoibackend.applikuapp.com/",
 ]
 
 # import sentry_sdk
@@ -182,3 +183,19 @@ CSRF_TRUSTED_ORIGINS = [
 #     # We recommend adjusting this value in production.
 #     profiles_sample_rate=1.0,
 # )
+
+
+# Ensure secure cookies
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
+# Redirect HTTP to HTTPS
+SECURE_SSL_REDIRECT = True
+
+# Set HSTS header
+SECURE_HSTS_SECONDS = 31536000
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
+
+# Use a secure proxy to detect the user's protocol
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
