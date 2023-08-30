@@ -34,6 +34,7 @@ schema_view = get_schema_view(
         license=openapi.License(name="Your License"),
     ),
     public=True,
+    authentication_classes=(JWTAuthentication,),
     permission_classes=(permissions.AllowAny,),
 )
 
