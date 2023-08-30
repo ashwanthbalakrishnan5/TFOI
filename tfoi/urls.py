@@ -32,7 +32,7 @@ schema_view = get_schema_view(
             name="Ashwanth Balakrishnan",
             url="https://www.ashwanthbk.com",
         ),
-        license=openapi.License(name="Your License"),
+        license=openapi.License(name="License"),
     ),
     public=True,
     authentication_classes=(JWTAuthentication,),
