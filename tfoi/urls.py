@@ -23,9 +23,9 @@ from drf_yasg import openapi
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="TFOI",
-        default_version="v1",
-        description="TFOI Backend API",
+        title="TOFI",
+        default_version="v1.1",
+        description="TOFI Backend API",
         terms_of_service="https://www.ashwanthbk.com",
         contact=openapi.Contact(
             email="ashwanthbalakrishnan5@gmail.com",
